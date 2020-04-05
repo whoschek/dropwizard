@@ -1,4 +1,4 @@
-package io.dropwizard;
+package io.dropwizard.core;
 
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
@@ -16,7 +16,8 @@ public class ApplicationTest {
         boolean fatalError = false;
 
         @Override
-        public void run(FakeConfiguration configuration, Environment environment) {}
+        public void run(FakeConfiguration configuration, Environment environment) {
+        }
 
         @Override
         protected void onFatalError() {

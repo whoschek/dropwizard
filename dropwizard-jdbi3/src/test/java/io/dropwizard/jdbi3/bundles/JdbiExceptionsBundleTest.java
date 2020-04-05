@@ -1,6 +1,6 @@
 package io.dropwizard.jdbi3.bundles;
 
-import io.dropwizard.Configuration;
+import io.dropwizard.core.Configuration;
 import io.dropwizard.jdbi3.jersey.LoggingJdbiExceptionMapper;
 import io.dropwizard.jdbi3.jersey.LoggingSQLExceptionMapper;
 import io.dropwizard.jersey.setup.JerseyEnvironment;

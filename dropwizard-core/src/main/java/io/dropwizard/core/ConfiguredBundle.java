@@ -1,4 +1,4 @@
-package io.dropwizard;
+package io.dropwizard.core;
 
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;

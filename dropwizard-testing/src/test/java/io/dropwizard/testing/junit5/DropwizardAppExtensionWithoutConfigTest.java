@@ -1,7 +1,7 @@
 package io.dropwizard.testing.junit5;
 
-import io.dropwizard.Application;
-import io.dropwizard.Configuration;
+import io.dropwizard.core.Application;
+import io.dropwizard.core.Configuration;
 import io.dropwizard.setup.Environment;
 import io.dropwizard.testing.ConfigOverride;
 import org.junit.jupiter.api.Assertions;

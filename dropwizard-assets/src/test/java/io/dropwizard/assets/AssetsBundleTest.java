@@ -1,6 +1,6 @@
 package io.dropwizard.assets;
 
-import io.dropwizard.Configuration;
+import io.dropwizard.core.Configuration;
 import io.dropwizard.jetty.setup.ServletEnvironment;
 import io.dropwizard.servlets.assets.AssetServlet;
 import io.dropwizard.servlets.assets.ResourceURL;

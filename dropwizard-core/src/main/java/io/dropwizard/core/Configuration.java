@@ -1,4 +1,4 @@
-package io.dropwizard;
+package io.dropwizard.core;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.logging.DefaultLoggingFactory;

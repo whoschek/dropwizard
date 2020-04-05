@@ -1,8 +1,8 @@
 package io.dropwizard.hibernate;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.dropwizard.Application;
-import io.dropwizard.Configuration;
+import io.dropwizard.core.Application;
+import io.dropwizard.core.Configuration;
 import io.dropwizard.db.DataSourceFactory;
 import io.dropwizard.db.PooledDataSourceFactory;
 import io.dropwizard.jersey.errors.ErrorMessage;
@@ -51,7 +51,7 @@ public class LazyLoadingTest {
         }
     }
 
-    public static class TestApplication extends io.dropwizard.Application<TestConfiguration> {
+    public static class TestApplication extends Application<TestConfiguration> {
         final HibernateBundle<TestConfiguration> hibernate = new HibernateBundle<TestConfiguration>(
                 Arrays.asList(Person.class, Dog.class), new SessionFactoryFactory()) {
             @Override

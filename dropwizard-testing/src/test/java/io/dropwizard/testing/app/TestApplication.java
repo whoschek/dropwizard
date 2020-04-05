@@ -1,6 +1,6 @@
 package io.dropwizard.testing.app;
 
-import io.dropwizard.Application;
+import io.dropwizard.core.Application;
 import io.dropwizard.setup.Environment;
 
 public class TestApplication extends Application<TestConfiguration> {

@@ -1,7 +1,7 @@
 package io.dropwizard.sslreload;
 
-import io.dropwizard.Configuration;
-import io.dropwizard.ConfiguredBundle;
+import io.dropwizard.core.Configuration;
+import io.dropwizard.core.ConfiguredBundle;
 import io.dropwizard.jetty.MutableServletContextHandler;
 import io.dropwizard.jetty.SslReload;
 import io.dropwizard.setup.Environment;

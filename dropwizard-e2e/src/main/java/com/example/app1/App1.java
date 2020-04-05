@@ -1,8 +1,8 @@
 package com.example.app1;
 
 import com.github.mustachejava.MustacheNotFoundException;
-import io.dropwizard.Application;
-import io.dropwizard.Configuration;
+import io.dropwizard.core.Application;
+import io.dropwizard.core.Configuration;
 import io.dropwizard.jersey.optional.EmptyOptionalNoContentExceptionMapper;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;

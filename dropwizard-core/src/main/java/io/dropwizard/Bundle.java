@@ -1,5 +1,7 @@
 package io.dropwizard;
 
+import io.dropwizard.core.Configuration;
+import io.dropwizard.core.ConfiguredBundle;
 import io.dropwizard.setup.Environment;
 
 /**

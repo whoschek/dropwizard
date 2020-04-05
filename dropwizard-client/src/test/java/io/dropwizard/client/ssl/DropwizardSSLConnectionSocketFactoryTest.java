@@ -1,7 +1,7 @@
 package io.dropwizard.client.ssl;
 
-import io.dropwizard.Application;
-import io.dropwizard.Configuration;
+import io.dropwizard.core.Application;
+import io.dropwizard.core.Configuration;
 import io.dropwizard.client.DropwizardSSLConnectionSocketFactory;
 import io.dropwizard.client.JerseyClientBuilder;
 import io.dropwizard.client.JerseyClientConfiguration;

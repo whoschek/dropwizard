@@ -1,4 +1,4 @@
-package io.dropwizard;
+package io.dropwizard.core;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.dropwizard.jackson.Jackson;
@@ -33,16 +33,16 @@ public class ConfigurationTest {
         Class<?>[] dummyArray = {};
 
         mapper.getSubtypeResolver()
-            .registerSubtypes(StreamSupport.stream(ServiceLoader.load(AppenderFactory.class).spliterator(), false)
-                .map(Object::getClass)
-                .collect(Collectors.toList())
-                .toArray(dummyArray));
+                .registerSubtypes(StreamSupport.stream(ServiceLoader.load(AppenderFactory.class).spliterator(), false)
+                        .map(Object::getClass)
+                        .collect(Collectors.toList())
+                        .toArray(dummyArray));
 
         mapper.getSubtypeResolver()
-            .registerSubtypes(StreamSupport.stream(ServiceLoader.load(ConnectorFactory.class).spliterator(), false)
-                .map(Object::getClass)
-                .collect(Collectors.toList())
-                .toArray(dummyArray));
+                .registerSubtypes(StreamSupport.stream(ServiceLoader.load(ConnectorFactory.class).spliterator(), false)
+                        .map(Object::getClass)
+                        .collect(Collectors.toList())
+                        .toArray(dummyArray));
 
         // Issue-96: some types were not serializable
         final String json = mapper.writeValueAsString(configuration);

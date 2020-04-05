@@ -1,6 +1,7 @@
 package io.dropwizard.server;
 
-import io.dropwizard.Configuration;
+import io.dropwizard.core.Configuration;
+import io.dropwizard.core.Application;
 import io.dropwizard.jersey.DropwizardResourceConfig;
 import io.dropwizard.jersey.setup.JerseyContainerHolder;
 import io.dropwizard.jersey.setup.JerseyEnvironment;
@@ -20,7 +21,7 @@ import static org.mockito.Mockito.when;
  * Tests that the {@link JerseyEnvironment#getUrlPattern()} is set by the following priority order:
  * <ol>
  *     <li>YAML defined value</li>
- *     <li>{@link io.dropwizard.Application#run(Configuration, Environment)} defined value</li>
+ *     <li>{@link Application#run(Configuration, Environment)} defined value</li>
  *     <li>Default value defined by {@link DropwizardResourceConfig#urlPattern}</li>
  * </ol>
  */

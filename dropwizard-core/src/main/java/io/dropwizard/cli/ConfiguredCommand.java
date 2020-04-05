@@ -1,7 +1,7 @@
 package io.dropwizard.cli;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.dropwizard.Configuration;
+import io.dropwizard.core.Configuration;
 import io.dropwizard.configuration.ConfigurationException;
 import io.dropwizard.configuration.ConfigurationFactory;
 import io.dropwizard.configuration.ConfigurationFactoryFactory;

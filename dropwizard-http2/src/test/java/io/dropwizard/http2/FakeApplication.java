@@ -1,8 +1,8 @@
 package io.dropwizard.http2;
 
 import com.codahale.metrics.health.HealthCheck;
-import io.dropwizard.Application;
-import io.dropwizard.Configuration;
+import io.dropwizard.core.Application;
+import io.dropwizard.core.Configuration;
 import io.dropwizard.setup.Environment;
 
 import javax.ws.rs.GET;

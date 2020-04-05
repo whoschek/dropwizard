@@ -1,4 +1,4 @@
-package io.dropwizard;
+package io.dropwizard.core;
 
 import ch.qos.logback.classic.Level;
 import io.dropwizard.cli.CheckCommand;

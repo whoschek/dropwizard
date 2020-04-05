@@ -193,7 +193,7 @@ Here's what our configuration class will look like, full `example conf here`_:
 
     package com.example.helloworld;
 
-    import io.dropwizard.Configuration;
+    import io.dropwizard.core.Configuration;
     import com.fasterxml.jackson.annotation.JsonProperty;
     import javax.validation.constraints.NotEmpty;
 
@@ -279,7 +279,7 @@ commands which provide basic functionality. (More on that later.) For now, thoug
 
     package com.example.helloworld;
 
-    import io.dropwizard.Application;
+    import io.dropwizard.core.Application;
     import io.dropwizard.setup.Bootstrap;
     import io.dropwizard.setup.Environment;
     import com.example.helloworld.resources.HelloWorldResource;
