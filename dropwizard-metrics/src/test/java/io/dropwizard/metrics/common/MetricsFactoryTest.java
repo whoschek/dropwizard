@@ -4,7 +4,7 @@ import com.codahale.metrics.MetricAttribute;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.dropwizard.configuration.YamlConfigurationFactory;
 import io.dropwizard.jackson.Jackson;
-import io.dropwizard.logging.BootstrapLogging;
+import io.dropwizard.logging.common.BootstrapLogging;
 import io.dropwizard.metrics.core.ConsoleReporterFactory;
 import io.dropwizard.metrics.core.CsvReporterFactory;
 import io.dropwizard.metrics.core.Slf4jReporterFactory;

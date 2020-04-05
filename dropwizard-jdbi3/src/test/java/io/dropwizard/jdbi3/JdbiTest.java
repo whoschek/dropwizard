@@ -3,7 +3,7 @@ package io.dropwizard.jdbi3;
 import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.jdbi3.strategies.TimedAnnotationNameStrategy;
 import io.dropwizard.db.DataSourceFactory;
-import io.dropwizard.logging.BootstrapLogging;
+import io.dropwizard.logging.common.BootstrapLogging;
 import io.dropwizard.setup.Environment;
 import io.dropwizard.util.Resources;
 import org.eclipse.jetty.util.component.LifeCycle;

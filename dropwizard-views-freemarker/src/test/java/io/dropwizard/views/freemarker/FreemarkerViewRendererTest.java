@@ -3,7 +3,7 @@ package io.dropwizard.views.freemarker;
 import com.codahale.metrics.MetricRegistry;
 
 import freemarker.template.Configuration;
-import io.dropwizard.logging.BootstrapLogging;
+import io.dropwizard.logging.common.BootstrapLogging;
 import io.dropwizard.views.common.ViewMessageBodyWriter;
 import io.dropwizard.views.common.ViewRenderExceptionMapper;
 import io.dropwizard.views.common.ViewRenderer;
