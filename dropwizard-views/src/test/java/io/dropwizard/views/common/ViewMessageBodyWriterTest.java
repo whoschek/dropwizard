@@ -1,4 +1,4 @@
-package io.dropwizard.views;
+package io.dropwizard.views.common;
 
 import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.Timer;
@@ -55,7 +55,7 @@ public class ViewMessageBodyWriterTest {
         writer.setHeaders(mock(HttpHeaders.class));
 
         writer.writeTo(view, Class.class, Class.class, new Annotation[]{}, new MediaType(),
-            new MultivaluedHashMap<>(), stream);
+                new MultivaluedHashMap<>(), stream);
 
         verify(nonRenderable).isRenderable(view);
         verifyNoMoreInteractions(nonRenderable);
@@ -73,7 +73,7 @@ public class ViewMessageBodyWriterTest {
 
         assertThatExceptionOfType(WebApplicationException.class).isThrownBy(() -> {
             writer.writeTo(view, Class.class, Class.class, new Annotation[]{}, new MediaType(),
-                new MultivaluedHashMap<>(), stream);
+                    new MultivaluedHashMap<>(), stream);
         }).withCauseExactlyInstanceOf(ViewRenderException.class);
 
         verify(timerContext).stop();
@@ -97,7 +97,7 @@ public class ViewMessageBodyWriterTest {
 
         assertThatExceptionOfType(WebApplicationException.class).isThrownBy(() -> {
             writer.writeTo(view, Class.class, Class.class, new Annotation[]{}, new MediaType(),
-                new MultivaluedHashMap<>(), stream);
+                    new MultivaluedHashMap<>(), stream);
         }).withCause(exception);
 
         verify(timerContext).stop();

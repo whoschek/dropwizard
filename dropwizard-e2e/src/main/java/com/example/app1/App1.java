@@ -7,7 +7,7 @@ import io.dropwizard.jersey.optional.EmptyOptionalNoContentExceptionMapper;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import io.dropwizard.util.Throwables;
-import io.dropwizard.views.ViewBundle;
+import io.dropwizard.views.common.ViewBundle;
 import org.eclipse.jetty.io.EofException;
 import org.glassfish.jersey.spi.ExtendedExceptionMapper;
 

@@ -1,6 +1,6 @@
 package com.example.app1;
 
-import io.dropwizard.views.View;
+import io.dropwizard.views.common.View;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -9,7 +9,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.util.LinkedHashMap;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.OptionalInt;
 
