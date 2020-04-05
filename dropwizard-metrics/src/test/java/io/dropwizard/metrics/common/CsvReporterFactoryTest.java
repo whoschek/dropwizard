@@ -1,4 +1,4 @@
-package io.dropwizard.metrics;
+package io.dropwizard.metrics.common;
 
 import com.codahale.metrics.MetricRegistry;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -6,6 +6,9 @@ import io.dropwizard.configuration.YamlConfigurationFactory;
 import io.dropwizard.jackson.DiscoverableSubtypeResolver;
 import io.dropwizard.jackson.Jackson;
 import io.dropwizard.lifecycle.setup.LifecycleEnvironment;
+import io.dropwizard.metrics.core.ConsoleReporterFactory;
+import io.dropwizard.metrics.core.CsvReporterFactory;
+import io.dropwizard.metrics.core.Slf4jReporterFactory;
 import io.dropwizard.util.Resources;
 import io.dropwizard.validation.BaseValidator;
 import org.junit.jupiter.api.BeforeEach;
@@ -19,14 +22,14 @@ public class CsvReporterFactoryTest {
     private final ObjectMapper objectMapper = Jackson.newObjectMapper();
     private final YamlConfigurationFactory<MetricsFactory> factory =
             new YamlConfigurationFactory<>(MetricsFactory.class,
-                                           BaseValidator.newValidator(),
-                                           objectMapper, "dw");
+                    BaseValidator.newValidator(),
+                    objectMapper, "dw");
 
     @BeforeEach
     public void setUp() throws Exception {
         objectMapper.getSubtypeResolver().registerSubtypes(ConsoleReporterFactory.class,
-                                                           CsvReporterFactory.class,
-                                                           Slf4jReporterFactory.class);
+                CsvReporterFactory.class,
+                Slf4jReporterFactory.class);
     }
 
     @Test

@@ -1,10 +1,13 @@
-package io.dropwizard.metrics;
+package io.dropwizard.metrics.common;
 
 import com.codahale.metrics.MetricAttribute;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.dropwizard.configuration.YamlConfigurationFactory;
 import io.dropwizard.jackson.Jackson;
 import io.dropwizard.logging.BootstrapLogging;
+import io.dropwizard.metrics.core.ConsoleReporterFactory;
+import io.dropwizard.metrics.core.CsvReporterFactory;
+import io.dropwizard.metrics.core.Slf4jReporterFactory;
 import io.dropwizard.util.Duration;
 import io.dropwizard.util.Resources;
 import io.dropwizard.validation.BaseValidator;
@@ -23,13 +26,13 @@ public class MetricsFactoryTest {
 
     private final ObjectMapper objectMapper = Jackson.newObjectMapper();
     private final YamlConfigurationFactory<MetricsFactory> factory = new YamlConfigurationFactory<>(
-        MetricsFactory.class, BaseValidator.newValidator(), objectMapper, "dw");
+            MetricsFactory.class, BaseValidator.newValidator(), objectMapper, "dw");
     private MetricsFactory config;
 
     @BeforeEach
     public void setUp() throws Exception {
         objectMapper.getSubtypeResolver().registerSubtypes(ConsoleReporterFactory.class, CsvReporterFactory.class,
-            Slf4jReporterFactory.class);
+                Slf4jReporterFactory.class);
 
         this.config = factory.build(new File(Resources.getResource("yaml/metrics.yml").toURI()));
     }
@@ -53,7 +56,7 @@ public class MetricsFactoryTest {
         assertThat(reporterFactory).isInstanceOf(ConsoleReporterFactory.class);
         final ConsoleReporterFactory consoleReporterFactory = (ConsoleReporterFactory) reporterFactory;
         assertThat(consoleReporterFactory.getIncludesAttributes()).isEqualTo(EnumSet.of(
-            MetricAttribute.P50, MetricAttribute.P95, MetricAttribute.P98, MetricAttribute.P99));
+                MetricAttribute.P50, MetricAttribute.P95, MetricAttribute.P98, MetricAttribute.P99));
         assertThat(consoleReporterFactory.getExcludesAttributes()).isEqualTo(EnumSet.of(MetricAttribute.P98));
     }
 

@@ -3,7 +3,7 @@ package io.dropwizard.core;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.logging.DefaultLoggingFactory;
 import io.dropwizard.logging.LoggingFactory;
-import io.dropwizard.metrics.MetricsFactory;
+import io.dropwizard.metrics.common.MetricsFactory;
 import io.dropwizard.server.DefaultServerFactory;
 import io.dropwizard.server.ServerFactory;
 import io.dropwizard.setup.AdminFactory;

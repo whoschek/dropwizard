@@ -1,4 +1,4 @@
-package io.dropwizard.metrics;
+package io.dropwizard.metrics.common;
 
 import com.github.benmanes.caffeine.cache.Caffeine;
 import com.github.benmanes.caffeine.cache.LoadingCache;
@@ -12,8 +12,8 @@ class RegexStringMatchingStrategy implements StringMatchingStrategy {
 
     RegexStringMatchingStrategy() {
         patternCache = Caffeine.newBuilder()
-            .expireAfterWrite(Duration.ofHours(1))
-            .build(Pattern::compile);
+                .expireAfterWrite(Duration.ofHours(1))
+                .build(Pattern::compile);
     }
 
     @Override

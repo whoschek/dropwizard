@@ -1,10 +1,12 @@
-package io.dropwizard.metrics;
+package io.dropwizard.metrics.core;
 
 import com.codahale.metrics.CsvReporter;
 import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.ScheduledReporter;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import io.dropwizard.metrics.common.BaseFormattedReporterFactory;
+import io.dropwizard.metrics.common.BaseReporterFactory;
 
 import javax.annotation.Nullable;
 import java.io.File;

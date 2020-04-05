@@ -1,1 +1,2 @@
+io.dropwizard.metrics.common.ReporterFactory
 io.dropwizard.metrics.ReporterFactory

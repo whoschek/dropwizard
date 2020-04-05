@@ -1,16 +1,18 @@
-package io.dropwizard.metrics;
+package io.dropwizard.metrics.core;
 
 import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.ScheduledReporter;
 import com.codahale.metrics.Slf4jReporter;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonTypeName;
-import javax.validation.constraints.NotEmpty;
+import io.dropwizard.metrics.common.BaseReporterFactory;
+import io.dropwizard.metrics.common.ReporterFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.MarkerFactory;
 
 import javax.annotation.Nullable;
+import javax.validation.constraints.NotEmpty;
 
 /**
  * A {@link ReporterFactory} for {@link Slf4jReporter} instances.

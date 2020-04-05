@@ -1,4 +1,4 @@
-package io.dropwizard.metrics;
+package io.dropwizard.metrics.common;
 
 import com.codahale.metrics.MetricRegistry;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -115,8 +115,8 @@ public class MetricsFactory {
             try {
                 final ScheduledReporterManager manager =
                         new ScheduledReporterManager(reporter.build(registry),
-                                                     reporter.getFrequency().orElseGet(this::getFrequency),
-                                                     isReportOnStop());
+                                reporter.getFrequency().orElseGet(this::getFrequency),
+                                isReportOnStop());
                 environment.manage(manager);
             } catch (Exception e) {
                 LOGGER.warn("Failed to create reporter, metrics may not be properly reported.", e);
