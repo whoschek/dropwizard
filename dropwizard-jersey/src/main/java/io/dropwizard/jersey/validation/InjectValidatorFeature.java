@@ -1,6 +1,5 @@
-package io.dropwizard.validation;
+package io.dropwizard.jersey.validation;
 
-import io.dropwizard.jersey.validation.MutableValidatorFactory;
 import org.glassfish.jersey.server.validation.internal.InjectingConstraintValidatorFactory;
 
 import javax.inject.Inject;
